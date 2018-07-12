@@ -72,6 +72,7 @@ class ToxicReader(DatasetReader):
         # all into a single dataset.
         if not labels:
             labels = [0, 0, 0, 0, 0, 0]
+        print(labels)   
 
         toxic, severe_toxic, obscene, threat, insult, identity_hate = labels
 
