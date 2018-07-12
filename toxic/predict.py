@@ -16,7 +16,7 @@ from allennlp.service.predictors import Predictor
 #from toxic.models.model import ToxicModel
 #from toxic.service.predictors.predictor import ToxicPredictor
 
-ARCHIVE_FILE = '/content/allen-nlp-toxicity-updated/tmp14/model.tar.gz'
+ARCHIVE_FILE = '/tmp14/model.tar.gz'
 CUDA_DEVICE = 0
 PREDICTOR_NAME = 'toxic'
 INPUT_FILE = '/content/allen-nlp-toxicity-updated/data/test/test_toxic.csv'
