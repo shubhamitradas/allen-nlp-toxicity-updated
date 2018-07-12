@@ -10,7 +10,7 @@ import csv
 import sys
 
 from allennlp.models.archival import load_archive
-from allennlp.service.predictors import Predictor
+from allennlp.predictors import Predictor
 
 from data.dataset_reader.reader import ToxicReader
 from models.model import ToxicModel
