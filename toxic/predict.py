@@ -19,8 +19,8 @@ from service.predictors.predictor import ToxicPredictor
 ARCHIVE_FILE = '/tmp14/model.tar.gz'
 CUDA_DEVICE = 0
 PREDICTOR_NAME = 'toxic'
-INPUT_FILE = '/content/allen-nlp-toxicity-updated/data/test/test_toxic.csv'
-OUTPUT_FILE = '/content/allen-nlp-toxicity-updated/tmp14/predictions.csv'
+INPUT_FILE = '/content/allen-nlp-toxicity-updated/toxic/data/test/test_toxic.csv'
+OUTPUT_FILE = '/tmp14/predictions.csv'
 PRINT_TO_CONSOLE = False
 BATCH_SIZE = 128
 
