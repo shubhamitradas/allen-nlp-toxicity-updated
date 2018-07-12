@@ -49,6 +49,9 @@ class ToxicReader(DatasetReader):
             reader = csv.reader(data_file)
             for row in tqdm.tqdm(reader):
                 _, text, *labels = row
+                print(_)
+                print(text)
+                print(labels)
                 instances.append(self.text_to_instance(text, labels))
         if not instances:
             raise ConfigurationError("No instances read!")
