@@ -12,9 +12,9 @@ import sys
 from allennlp.models.archival import load_archive
 from allennlp.service.predictors import Predictor
 
-from toxic.data.dataset_reader.reader import ToxicReader
-from toxic.models.model import ToxicModel
-from toxic.service.predictors.predictor import ToxicPredictor
+from data.dataset_reader.reader import ToxicReader
+from models.model import ToxicModel
+from service.predictors.predictor import ToxicPredictor
 
 ARCHIVE_FILE = '/tmp14/model.tar.gz'
 CUDA_DEVICE = 0
