@@ -49,9 +49,6 @@ class ToxicReader(DatasetReader):
             reader = csv.reader(data_file)
             for row in tqdm.tqdm(reader):
                 _, text, *labels = row
-                print(_)
-                print(text)
-                print(labels)
                 instances.append(self.text_to_instance(text, labels))
         if not instances:
             raise ConfigurationError("No instances read!")
@@ -67,8 +64,7 @@ class ToxicReader(DatasetReader):
             text = text[:self.max_length]
         tokenized_text = self._tokenizer.tokenize(text)
         text_field = TextField(tokenized_text, self._token_indexers)
-        print("Text_field")
-        print(text_field)
+
 
         fields = {'text': text_field}
 
