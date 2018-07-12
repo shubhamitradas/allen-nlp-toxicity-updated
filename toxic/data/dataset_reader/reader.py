@@ -67,6 +67,8 @@ class ToxicReader(DatasetReader):
             text = text[:self.max_length]
         tokenized_text = self._tokenizer.tokenize(text)
         text_field = TextField(tokenized_text, self._token_indexers)
+        print("Text_field")
+        print(text_field)
 
         fields = {'text': text_field}
 
@@ -75,8 +77,7 @@ class ToxicReader(DatasetReader):
         # all into a single dataset.
         if not labels:
             labels = [0, 0, 0, 0, 0, 0]
-        print(labels) 
-        print(text)
+
 
         toxic, severe_toxic, obscene, threat, insult, identity_hate = labels
 
