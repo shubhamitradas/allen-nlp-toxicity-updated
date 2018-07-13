@@ -53,7 +53,7 @@ if __name__ == "__main__":
                 writer.writerow(row)
 
         batch_json_data = []
-        for comment_id, text in csv.reader(input_file):
+        for comment_id, text, *labels in csv.reader(input_file):
             print(text)
             json_data = {'id': comment_id, 'text': text}
             batch_json_data.append(json_data)
