@@ -14,7 +14,7 @@ from allennlp.nn.regularizers import RegularizerApplicator
 import allennlp.nn.util as util
 from allennlp.training.metrics import BooleanAccuracy
 
-from toxic.training.metrics.multilabel_f1 import MultiLabelF1Measure
+from training.metrics.multilabel_f1 import MultiLabelF1Measure
 
 @Model.register("toxic")
 class ToxicModel(Model):
