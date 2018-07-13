@@ -17,12 +17,12 @@ from models.model import ToxicModel
 from service.predictors.predictor import ToxicPredictor
 
 ARCHIVE_FILE = '/tmp5/model.tar.gz'
-CUDA_DEVICE = 0
+CUDA_DEVICE = -1
 PREDICTOR_NAME = 'toxic'
 INPUT_FILE = '/content/allen-nlp-toxicity-updated/toxic/data/test/test_toxic.csv'
 OUTPUT_FILE = '/tmp5/predictions.csv'
 PRINT_TO_CONSOLE = True
-BATCH_SIZE = 128
+BATCH_SIZE = 2
 
 if __name__ == "__main__":
     archive = load_archive(ARCHIVE_FILE, CUDA_DEVICE)
