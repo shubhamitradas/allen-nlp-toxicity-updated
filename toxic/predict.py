@@ -12,9 +12,9 @@ import sys
 from allennlp.models.archival import load_archive
 from allennlp.predictors import Predictor
 
-from toxic.data.dataset_reader.reader import ToxicReader
-from toxic.models.model import ToxicModel
-from toxic.service.predictors.predictor import ToxicPredictor
+from data.dataset_reader.reader import ToxicReader
+from models.model import ToxicModel
+from service.predictors.predictor import ToxicPredictor
 
 ARCHIVE_FILE = '/tmp5/model.tar.gz'
 CUDA_DEVICE = 0
@@ -34,6 +34,7 @@ if __name__ == "__main__":
         writer.writerow(["id","toxic","severe_toxic","obscene","threat","insult","identity_hate"])
 
         def _run_predictor(batch_data):
+            print(batch_data)
             if len(batch_data) == 1:
                 result = predictor.predict_json(batch_data[0], CUDA_DEVICE)
                 # Batch results return a list of json objects, so in
@@ -53,6 +54,7 @@ if __name__ == "__main__":
 
         batch_json_data = []
         for comment_id, text in csv.reader(input_file):
+            print(text)
             json_data = {'id': comment_id, 'text': text}
             batch_json_data.append(json_data)
             if len(batch_json_data) == BATCH_SIZE:
