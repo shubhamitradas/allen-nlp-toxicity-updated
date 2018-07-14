@@ -22,7 +22,7 @@ PREDICTOR_NAME = 'toxic'
 INPUT_FILE = '/content/allen-nlp-toxicity-updated/toxic/data/test/test_toxic.csv'
 OUTPUT_FILE = '/tmp5/predictions.csv'
 PRINT_TO_CONSOLE = True
-BATCH_SIZE = 12
+BATCH_SIZE = 1
 
 if __name__ == "__main__":
     archive = load_archive(ARCHIVE_FILE, CUDA_DEVICE)
@@ -36,12 +36,12 @@ if __name__ == "__main__":
         def _run_predictor(batch_data):
             print(batch_data)
             if len(batch_data) == 1:
-                result = predictor.predict_json(batch_data[0], CUDA_DEVICE)
+                result = predictor.predict_json(batch_data[0])
                 # Batch results return a list of json objects, so in
                 # order to iterate over the result below we wrap this in a list.
                 results = [result]
             else:
-                results = predictor.predict_batch_json(batch_data, CUDA_DEVICE)
+                results = predictor.predict_batch_json(batch_data)
 
             for model_input, output in zip(batch_data, results):
 
