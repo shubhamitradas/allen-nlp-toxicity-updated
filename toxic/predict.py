@@ -21,7 +21,7 @@ CUDA_DEVICE = 0
 PREDICTOR_NAME = 'toxic'
 INPUT_FILE = '/content/allen-nlp-toxicity-updated/toxic/data/test/test_toxic.csv'
 OUTPUT_FILE = '/tmp1/predictions.csv'
-PRINT_TO_CONSOLE = True
+PRINT_TO_CONSOLE = False
 BATCH_SIZE = 1
 
 if __name__ == "__main__":
