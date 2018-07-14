@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
         batch_json_data = []
         for comment_id, text, *labels in csv.reader(input_file):
-            print(text)
+            #print(text)
             json_data = {'id': comment_id, 'text': text}
             batch_json_data.append(json_data)
             if len(batch_json_data) == BATCH_SIZE:
