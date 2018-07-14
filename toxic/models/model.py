@@ -67,7 +67,7 @@ class ToxicModel(Model):
     def forward(self,
                 text: Dict[str, torch.Tensor],
                 labels: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
-        print("IN MODEL")
+        #print("IN MODEL")
 
         embedded_text = self.text_field_embedder(text)
         mask = util.get_text_field_mask(text)
