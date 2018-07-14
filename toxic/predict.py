@@ -16,11 +16,11 @@ from data.dataset_reader.reader import ToxicReader
 from models.model import ToxicModel
 from service.predictors.predictor import ToxicPredictor
 
-ARCHIVE_FILE = '/tmp5/model.tar.gz'
+ARCHIVE_FILE = '/tmp1/model.tar.gz'
 CUDA_DEVICE = 0
 PREDICTOR_NAME = 'toxic'
 INPUT_FILE = '/content/allen-nlp-toxicity-updated/toxic/data/test/test_toxic.csv'
-OUTPUT_FILE = '/tmp5/predictions.csv'
+OUTPUT_FILE = '/tmp1/predictions.csv'
 PRINT_TO_CONSOLE = True
 BATCH_SIZE = 1
 
