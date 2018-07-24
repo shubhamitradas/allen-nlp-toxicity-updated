@@ -29,7 +29,7 @@ class ToxicPredictor(Predictor):
             self._dataset_reader.text_to_instance(input['text'])
             for input in inputs
         ]
-        print(instances)
+        #print(instances)
         outputs = self._model.forward_on_instances(instances)
 
         for input, output in zip(inputs, outputs):
