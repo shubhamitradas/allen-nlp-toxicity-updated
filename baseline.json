@@ -3,6 +3,10 @@
       "type": "toxic",
       "max_length": 5000,
       "token_indexers": {
+         "tokens": {
+            "type": "single_id",
+            "lowercase_tokens": true
+        },  
         "elmo": {
           "type": "elmo_characters"
         } 
@@ -31,7 +35,7 @@
       "encoder": {
         "type": "lstm",
         "bidirectional": true,
-        "input_size": 1224,
+        "input_size": 1124,
         "hidden_size": 100,
         "num_layers": 2,
         "dropout": 0.2
